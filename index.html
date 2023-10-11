@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang=" en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Screenshot_001.png" class="logo">
+            <ul class="navigation">
+                <li><a href="#home"
+                class="nav-link">Home</a></li>
+                <li><a href="#about"
+                class="nav-link">About</a></li>
+                <li><a href="#services"
+                class="nav-link">Services</a></li>
+                <li><a href="#portfolio"
+                class="nav-link">Portfolio</a></li>
+                <li><a href="#contact"
+                class="nav-link">Contact</a></li>
+                
+                
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h2>Welcome to my Portfolio.</h2>
+            <p> Software Engineer</p>
+            <h1>Hello there. I'm <span>Newton Maina</span><br> from Kenya</h1>
+        </div>
+    </div>
+</div>
+
+ <!-- --------about-------- -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/About_me.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1><br>
+                <p>Currently in study progress in KCA University.<br>
+                <br>
+                I am an enthusiastic, self-motivated, reliable,responsible and a hardworking person.
+                I yearn to join up companies and work maturely with teams in reason to make use of 
+                opportunities and make them successful in favour of the company.<br>
+               Flexible in my working hours, being able to work all day time, in evenings and weekends too.
+               Keen and very willing to learn new skills, very dependable and often seek new responsibilities 
+               within a wide range of employment areas.</p><br><br>
+               <div class="tab-titles">
+                <p class="tab-links  active-link"onclick="opentab('skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                <p class="tab-links"onclick="opentab('education')">Education</p>
+               </div>
+               <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Software Development</span><br>Creating Program/Code Interfaces</li>
+                    <li><span>Web Development</span><br>Web Applicaton Development</li>
+                    <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                    <li><span>Networking</span><br>Integration and implementation of Computer Communication Networks</li>
+                </ul>
+               </div>
+               <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>April 2023 - Current</span><br>Computer Science Trainer at Crystal Enterprise Kangema</li>
+                    <li><span>April 2023 - Current </span><br>Cyber Receptionist at Crystal Enterprise Kangema</li>
+                </ul>
+               </div>
+               <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Sep 2021 - Current</span><br>Bsc. Software Development at KCA University.</li>
+                    <li><span>May 2022 - October 2022</span><br>Proffesional Certificate - Cisco Certified Networking Associate (CCNA Level 1-3) at KCA University.</li>
+                    <li><span>Jan 2017 - April 2021</span><br>High School Certificate - Grade B (66 points) at Kiambu High School.</li>
+                </ul>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------------services------------- -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1><br>
+        <div class="services-list">
+             <div>
+                <h2></h2>
+             </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+
+</script>
+</body>
+</html>
